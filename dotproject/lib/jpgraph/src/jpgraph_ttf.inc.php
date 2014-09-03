@@ -86,7 +86,7 @@ define("FF_FONT2",4);
 // Actual name of the TTF file used together with FF_CHINESE aka FF_BIG5
 // This is the TTF file being used when the font family is specified as
 // either FF_CHINESE or FF_BIG5
-define('CHINESE_TTF_FONT','bkai00mp.ttf');
+define('CHINESE_TTF_FONT','fireflysung.ttf');
 
 // Special unicode greek language support
 define("LANGUAGE_GREEK",false);
@@ -323,9 +323,9 @@ class TTF {
 	    	FS_BOLDITALIC =>'' ),
 	    FF_CHINESE  =>   array(
 	    	FS_NORMAL =>CHINESE_TTF_FONT,
-	    	FS_BOLD =>'',
-	    	FS_ITALIC =>'',
-	    	FS_BOLDITALIC =>'' ),
+	    	FS_BOLD =>CHINESE_TTF_FONT,
+	    	FS_ITALIC =>CHINESE_TTF_FONT,
+	    	FS_BOLDITALIC =>CHINESE_TTF_FONT ),
 	    FF_BIG5  =>   array(
 	    	FS_NORMAL =>CHINESE_TTF_FONT,
 	    	FS_BOLD =>'',

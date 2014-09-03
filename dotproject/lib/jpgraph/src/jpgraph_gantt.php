@@ -2727,7 +2727,7 @@ class GanttScale {
                     $txt = sprintf($this->week->iLabelFormStr,$weeknbr);
                 elseif( $this->week->iStyle==WEEKSTYLE_FIRSTDAY ||
                         $this->week->iStyle==WEEKSTYLE_FIRSTDAYWNBR )
-                    $txt = date("j/n",$week);
+                    $txt = date("n/j",$week);
                 elseif( $this->week->iStyle==WEEKSTYLE_FIRSTDAY2 ||
                         $this->week->iStyle==WEEKSTYLE_FIRSTDAY2WNBR ) {
                     $monthnbr = date("n",$week)-1;
@@ -2793,7 +2793,8 @@ class GanttScale {
     function StrokeMonths($aYCoord,$getHeight=false) {
         if( $this->month->iShowLabels ) {
             $img=$this->iImg;
-            $img->SetFont($this->month->iFFamily,$this->month->iFStyle,$this->month->iFSize);
+            //$img->SetFont($this->month->iFFamily,$this->month->iFStyle,$this->month->iFSize);
+            $img->SetFont(FF_CUSTOM,$this->month->iFStyle,$this->month->iFSize);
             $yt=$aYCoord+$img->top_margin;
             $yb=$yt + $img->GetFontHeight() + $this->month->iTitleVertMargin + $this->month->iFrameWeight;
             if( $getHeight ) {

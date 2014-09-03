@@ -1229,6 +1229,7 @@ class Date_Calc
      */
     function getMonthNames($pb_abbreviated = false)
     {
+    		setlocale(LC_TIME, 'en');
         $ret = array();
         foreach (Date_Calc::getMonths(2001) as $i) {
             $ret[$i] = strftime($pb_abbreviated ? '%b' : '%B',
@@ -2371,6 +2372,7 @@ class Date_Calc
      */
     function getWeekDays($pb_abbreviated = false)
     {
+    		setlocale(LC_TIME, 'en');
         for ($i = 0; $i < 7; $i++) {
             $weekdays[$i] = strftime($pb_abbreviated ? '%a' : '%A',
                                      mktime(0, 0, 0, 1, $i, 2001));

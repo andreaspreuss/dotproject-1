@@ -360,6 +360,7 @@ class DateLocale {
     }
 
     function Set($aLocale) {
+    		global $locale;
         if ( in_array($aLocale, array_keys($this->iDayAbb)) ){
             $this->iLocale = $aLocale;
             return TRUE;  // already cached nothing else to do!
@@ -394,12 +395,24 @@ class DateLocale {
             $this->iShortDay[$aLocale][]= $day;
         }
 
-        for($i=1; $i<=12; ++$i) {
-            list($short ,$full) = explode('|', strftime("%b|%B",strtotime("2001-$i-01")));
-            $this->iShortMonth[$aLocale][] = ucfirst($short);
-            $this->iMonthName [$aLocale][] = ucfirst($full);
-        }
-
+        //for($i=1; $i<=12; ++$i) {
+        //    list($short ,$full) = explode('|', strftime("%b|%B",strtotime("2001-$i-01")));
+        //    $this->iShortMonth[$aLocale][] = ucfirst($short);
+        //    $this->iMonthName [$aLocale][] = ucfirst($full);
+        //}
+	for($i=0; $i<12; ++$i) {
+		if( !isset( $locale ) )
+		{
+		    list($short ,$full) = explode('|', strftime("%b|%B",strtotime("2001-$i-01")));
+		    $this->iShortMonth[$aLocale][] = ucfirst($short);
+		    $this->iMonthName [$aLocale][] = ucfirst($full);
+		}
+		else
+		{
+		    $this->iShortMonth[$aLocale][] = $locale['monthsshort'][$i];
+		    $this->iMonthName [$aLocale][] = $locale['months'][$i];
+		}
+	}
         setlocale(LC_TIME, $pLocale);
 
         return TRUE;

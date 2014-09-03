@@ -432,9 +432,9 @@ INSERT INTO `%dbprefix%contacts` (contact_id, contact_first_name, contact_last_n
 
 INSERT INTO `%dbprefix%permissions` VALUES (1,1,"all",-1, -1);
 
-INSERT INTO `%dbprefix%user_preferences` VALUES("0", "LOCALE", "en");
+INSERT INTO `%dbprefix%user_preferences` VALUES("0", "LOCALE", "zh-TW");
 INSERT INTO `%dbprefix%user_preferences` VALUES("0", "TABVIEW", "0");
-INSERT INTO `%dbprefix%user_preferences` VALUES("0", "SHDATEFORMAT", "%d/%m/%Y");
+INSERT INTO `%dbprefix%user_preferences` VALUES("0", "SHDATEFORMAT", "%m/%d/%Y");
 INSERT INTO `%dbprefix%user_preferences` VALUES("0", "TIMEFORMAT", "%I:%M %p");
 INSERT INTO `%dbprefix%user_preferences` VALUES("0", "UISTYLE", "default");
 INSERT INTO `%dbprefix%user_preferences` VALUES("0", "TASKASSIGNMAX", "100");
@@ -621,7 +621,7 @@ CREATE TABLE `%dbprefix%config` (
 # Dumping data for table `config`
 #
 
-INSERT INTO `%dbprefix%config` VALUES (0, 'host_locale', 'en', '', 'text');
+INSERT INTO `%dbprefix%config` VALUES (0, 'host_locale', 'zh_tw', '', 'text');
 INSERT INTO `%dbprefix%config` VALUES (0, 'check_overallocation', 'false', '', 'checkbox');
 INSERT INTO `%dbprefix%config` VALUES (0, 'currency_symbol', '$', '', 'text');
 INSERT INTO `%dbprefix%config` VALUES (0, 'host_style', 'default', '', 'text');

@@ -368,9 +368,9 @@ for ($i = 0; $i < count(@$gantt_arr); $i ++) {
 		$level = 0;
 	}
 	$name = $a['task_name'];
-	if ($locale_char_set=='utf-8' && function_exists('utf8_decode')) {
-		$name = utf8_decode($name);
-	}
+	//if ($locale_char_set=='utf-8' && function_exists('utf8_decode')) {
+	//	$name = utf8_decode($name);
+	//}
 	$name = ((mb_strlen($name) > 34) ? (mb_substr($name, 0, 33) . '.') : $name);
 	$name = (str_repeat(' ', $level) . $name);
 	
