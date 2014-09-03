@@ -247,7 +247,7 @@
 "hide"=>"",
 "host_locale_title"=>"語言",
 "host_locale_tooltip"=>"",
-"host_style_title"=>"默認用戶界面風格",
+"host_style_title"=>"預設用戶界面風格",
 "host_style_tooltip"=>"",
 "index_max_file_size_title"=>"文件最大限額",
 "index_max_file_size_tooltip"=>"",

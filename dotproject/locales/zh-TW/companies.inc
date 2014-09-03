@@ -28,7 +28,7 @@
 "Reset search"=>"重設搜尋",
 "Search"=>"搜尋",
 "Started"=>"開始",
-"State"=>"狀態",
+"State"=>"州",
 "Status"=>"身份",
 "Suppliers"=>"供應商",
 "Task Name"=>"任務名稱",
