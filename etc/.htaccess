@@ -1,0 +1,6 @@
+AuthName "-- blah --"
+AuthType Basic
+AuthUserFile /service/dotproject/.htpasswd
+<Limit GET POST>
+require valid-user
+</Limit>
