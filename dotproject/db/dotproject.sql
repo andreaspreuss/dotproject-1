@@ -572,7 +572,9 @@ CREATE TABLE `%dbprefix%common_notes` (
   `note_hours` float NOT NULL default '0',
   `note_code` varchar(8) NOT NULL default '',
   `note_created` datetime NOT NULL default '0000-00-00 00:00:00',
-  `note_modified` timestamp(14) NOT NULL,
+  `note_modified` timestamp,
+# fix for mysql timestamp max 6
+#  `note_modified` timestamp(14) NOT NULL,
   `note_modified_by` int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  (`note_id`)
 ) ; 
@@ -589,7 +591,9 @@ CREATE TABLE `%dbprefix%user_access_log` (
 `date_time_out` DATETIME DEFAULT '0000-00-00 00:00:00',
 `date_time_last_action` DATETIME DEFAULT '0000-00-00 00:00:00',
 PRIMARY KEY ( `user_access_log_id` )
-) TYPE = MyISAM;
+) ;
+# fix for innodb
+# ) TYPE = MyISAM;
 
 #20040910
 #Pinned tasks
@@ -609,7 +613,9 @@ PRIMARY KEY (`user_id`,`task_id`)
 
 CREATE TABLE `%dbprefix%config` (
   `config_id` int(11) NOT NULL auto_increment,
-  `config_name` varchar(255) NOT NULL default '',
+# fix for utf8mb4
+#  `config_name` varchar(255) NOT NULL default '',
+  `config_name` varchar(191) NOT NULL default '',
   `config_value` varchar(255) NOT NULL default '',
   `config_group` varchar(255) NOT NULL default '',
   `config_type` varchar(255) NOT NULL default '',
@@ -1132,7 +1138,9 @@ CREATE TABLE `%dbprefix%gacl_groups_axo_map` (
 
 DROP TABLE IF EXISTS `%dbprefix%gacl_phpgacl`;
 CREATE TABLE `%dbprefix%gacl_phpgacl` (
-  `name` varchar(230) NOT NULL default '',
+# fix for utf8mb4
+#  `name` varchar(230) NOT NULL default '',
+  `name` varchar(191) NOT NULL default '',
   `value` varchar(230) NOT NULL default '',
   PRIMARY KEY  (`name`)
 ) ;
