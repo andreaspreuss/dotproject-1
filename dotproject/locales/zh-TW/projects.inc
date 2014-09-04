@@ -159,6 +159,7 @@
 "Start Date"=>"開始日期",
 "Started and on time"=>"準時開始",
 "Status"=>"狀態",
+"Summaries"=>"摘要",
 "Summary"=>"摘要",
 "T.Owner"=>"",
 "Target Budget"=>"預算",
