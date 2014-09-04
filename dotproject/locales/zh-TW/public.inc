@@ -12,7 +12,7 @@
 "Repeat New Password"=>"新密碼確認",
 "View all allowed companies"=>"",
 "[none]"=>"[none]",
-"accessDeniedMsg"=>"你試圖在系統中訪問你沒有足夠權限操作的項目. 如有必要, 請與系統管理員聯系.",
+"accessDeniedMsg"=>"你試圖在系統中訪問你沒有足夠權限操作的項目. 如有必要, 請與系統管理員聯繫.",
 "chgpwLogin"=>"",
 "chgpwUpdated"=>"密碼已更新",
 "chgpwWrongPW"=>"密碼錯誤",
