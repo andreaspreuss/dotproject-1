@@ -80,6 +80,7 @@ CREATE TABLE `%dbprefix%contacts` (
   `contact_msn` varchar(255) default NULL,
   `contact_yahoo` varchar(255) default NULL,
   `contact_aol` varchar(30) default NULL,
+  `contact_skype` varchar(255) default NULL,
   `contact_notes` text,
   `contact_project` int(11) NOT NULL default '0',
   `contact_icon` varchar(20) default 'obj/contact',
