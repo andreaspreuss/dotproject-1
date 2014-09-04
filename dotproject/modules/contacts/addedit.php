@@ -62,9 +62,11 @@ function submitIt() {
 	if (form.contact_last_name.value.length < 1) {
 		alert("<?php echo $AppUI->_('contactsValidName', UI_OUTPUT_JS);?>");
 		form.contact_last_name.focus();
+/*
 	} else if (form.contact_order_by.value.length < 1) {
 		alert("<?php echo $AppUI->_('contactsOrderBy', UI_OUTPUT_JS);?>");
 		form.contact_order_by.focus();
+*/
 	} else {
 		form.submit();
 	}
